@@ -1,6 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomiclabs/hardhat-etherscan");
-const { privateKey, bscscanApiKey } = require('./secrets.json');
+const { privateKey, bscscanApiKey, ethApi, goerliApi } = require('./secrets.json');
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -27,6 +27,12 @@ module.exports = {
     },
     hardhat: {
     },
+    mainnet: {
+      url: "https://mainnet.infura.io/v3/",
+      chainId: 1,
+      gasPrice: 20000000000,
+      accounts: [privateKey]
+    },
     bsctestnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
       chainId: 97,
@@ -49,7 +55,9 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      bscTestnet: bscscanApiKey
+      bscTestnet: bscscanApiKey,
+      goerli: goerliApi,
+      ethereum: ethApi
     }
   },
   solidity: {
