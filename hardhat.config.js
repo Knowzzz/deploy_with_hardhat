@@ -39,6 +39,12 @@ module.exports = {
       gasPrice: 20000000000,
       accounts: [privateKey]
     },
+    goerli: {
+      url: "https://goerli.infura.io/v3/",
+      chainId: 5,
+      gasPrice: 20000000000,
+      accounts: [privateKey]
+    }
     
   },
   etherscan: {

@@ -1,10 +1,7 @@
 How to use this sample hardhat project ? 
 
 - Put the smart contract into /contracts/NFT.sol
-- Add a secrets.json file into your project and add your secret key like this : 
-{
-    "privateKey": ""
-}
+- Add your private key in the hardhat.config.js
 - npx hardhat compile
 - put into hardhat.config.js your chain id and other informations
 - npx hardhat run --network bsctestnet scripts/deploy.js
